@@ -1,0 +1,9 @@
+<article class="blog-post">
+    <h2 class="blog-post-title"><%= @work.title %></h2>
+
+    <p><%= @work.description.html_safe %></p>
+    <% if user_signed_in?%>
+    <%= link_to "Edit",edit_work_path,:class => "btn btn-sm btn-outline-secondary"%>
+<% end %>
+</article>
+

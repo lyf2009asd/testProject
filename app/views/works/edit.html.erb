@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Edit work history</h1>
+    <%=  bootstrap_form_with model: @work, url: work_path do |f| %>
+        <%= f.text_field :title %>
+        <%= f.text_field :duration %>
+        <%= f.text_area :description ,:cols=> "10", :rows=>"10" %>
+        <%= f.submit %>
+        
+    <% end %>
+    <%= button_to "Destroy", @work, method: :delete, form: { data: {turbo_confirm: 'Are you sure?'} } %>
+</div>
